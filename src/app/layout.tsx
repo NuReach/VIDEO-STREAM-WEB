@@ -4,6 +4,7 @@ import "./globals.css";
 import { ClerkProvider } from '@clerk/nextjs';
 import localFont from "next/font/local";
 import Navbar from "@/components/Navbar";
+import ClientProvider from "./ClientProvider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -26,10 +27,12 @@ export default function RootLayout({
     <ClerkProvider>
     <html lang="en">
       <body className={myFont.className}>
-        <Navbar />
-        <main>
-          {children}
-        </main>
+        <ClientProvider>
+          <Navbar />
+          <main>
+            {children}
+          </main>
+        </ClientProvider>
         </body>
     </html>
     </ClerkProvider>
