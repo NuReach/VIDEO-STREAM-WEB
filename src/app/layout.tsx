@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import "@stream-io/video-react-sdk/dist/css/styles.css";
 import { ClerkProvider } from '@clerk/nextjs';
 import localFont from "next/font/local";
 import Navbar from "@/components/Navbar";
 import ClientProvider from "./ClientProvider";
-
+import './globals.css';
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -29,9 +30,7 @@ export default function RootLayout({
       <body className={myFont.className}>
         <ClientProvider>
           <Navbar />
-          <main>
-            {children}
-          </main>
+          <main className="mx-auto max-w-5xl px-3 py-6">{children}</main>
         </ClientProvider>
         </body>
     </html>
