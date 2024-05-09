@@ -12,6 +12,9 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Meeting App LIVE-GO",
   description: "A Video Calling App",
+  icons : {
+    icon : ['./favicon.ico']
+  }
 };
 
 
