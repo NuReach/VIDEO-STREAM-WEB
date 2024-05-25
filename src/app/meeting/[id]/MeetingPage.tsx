@@ -184,10 +184,6 @@ function UpcomingMeetingScreen() {
       )}
       <Link href="/" className={buttonClassName}>
         Go home
-        <div className="space-y-3">
-        <h2 className="text-center text-xl font-bold">Recordings</h2>
-          <RecordingsList />
-      </div>
       </Link>
     </div>
   );
@@ -200,6 +196,10 @@ function MeetingEndedScreen() {
       <Link href="/" className={buttonClassName}>
         Go home
       </Link>
+      <div className="space-y-3">
+        <h2 className="text-center text-xl font-bold">Recordings</h2>
+          <RecordingsList />
+      </div>
     </div>
   );
 }
